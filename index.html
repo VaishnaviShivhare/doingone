@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Font Generator Online (𝓬𝓸𝓹𝔂 𝕒𝕟𝕕 𝓅𝒶𝓈𝓉𝑒) ― Fontgenerator.club</title>
+    <meta name="description" content="Font Generator. Welcome all of you to Generator, This is a Font Generator tool. Which is developed by encrypted codings of JavaScript, CSS and HTML.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link id="favicon" rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- hide display -->
+    <script type="text/javascript">
+        function showElem() {
+            document.querySelector('.box').style.display
+                = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        body {
+            display: block;
+            background: #E8E8E8;
+            background-size: 20vw;
+            background-image: url("https://fontgenerator.club/background.png");
+            background-repeat: repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            max-width: 808px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0.25rem;
+            padding-top: 6.2em;
+        }
+
+        .box {
+            display: none;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .fontgenerator {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 0em 0.25rem;
+        }
+
+        .input-box {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 6px;
+            max-width: 800px;
+        }
+
+        ::placeholder {
+            color: #888888;
+        }
+
+        #fontgenerator {
+            color: #000;
+            height: 80px;
+            resize: none;
+            width: 100%;
+            padding: 8px;
+            font-size: 1.28em;
+            text-align: left;
+            background: #fff;
+            border-color: #fff;
+            box-shadow: 0 1px 1px rgb(0 0 0 / 30%);
+            border-radius: 2px;
+            font-family: 'Open Sans';
+            letter-spacing: 0.5px;
+        }
+
+        h2 {
+            margin: 0.9em 0em;
+            font-family: system-ui;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 0.8em;
+            margin-top: 1.5em;
+        }
+
+        .fontgeneratorstyle {
+            background: #fff;
+            height: fit-content;
+            padding: 1em;
+        }
+
+        .fontgeneratorstyle p {
+            font-family: Arial;
+            background: #ffffff;
+            display: block;
+            font-size: 22px;
+            cursor: pointer;
+            margin: 0px;
+            margin-bottom: 25px;
+            overflow-wrap: break-word;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .fontgeneratorstyle p {
+                font-size: 20px;
+            }
+        }
+
+        .article {
+            background: #fff;
+            padding: 1.2em;
+            margin-top: 1em;
+            margin-bottom: 6em;
+        }
+
+        .article h1 {
+            font-family: system-ui;
+            font-size: 26px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 0.6em;
+            text-align: left;
+            margin-top: 0em;
+        }
+
+        .article h2 {
+            font-family: system-ui;
+            font-size: 22px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #000;
+            margin-top: 0.8em;
+            margin-bottom: 0.6em;
+            text-align: left;
+        }
+
+        .article p,
+        li {
+            font-size: 16px;
+            margin: 20px 0;
+            padding: 2px 0;
+            font-family: system-ui;
+            text-align: left;
+            line-height: 1.5em;
+        }
+
+        .article li {
+            font-size: 16px;
+            margin: 10px 0;
+            padding: 2px 0;
+            font-family: system-ui;
+            text-align: left;
+        }
+
+        p.copied {
+            position: fixed;
+            width: 80px;
+            right: 0;
+            bottom: 70%;
+            background: #0141d0;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 0;
+            z-index: 99999;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, .41)
+        }
+
+        p.copied span {
+            float: left;
+            width: 100%
+        }
+
+        p.copied .text {
+            display: none
+        }
+
+        #loadMore {
+            width: 160px;
+            color: #fff;
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            margin: 12px auto;
+            padding: 6px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            background-color: blue;
+            transition: .3s;
+        }
+
+        #loadMore:hover {
+            color: blue;
+            background-color: #fff;
+            text-decoration: none;
+        }
+
+        .noContent {
+            color: #000 !important;
+            background-color: transparent !important;
+            pointer-events: none;
+        }
+    </style>
+    <div class="main">
+        <p id="logo" style="display:none;">Font Generator</p>
+        <div class="fontgenerator">
+            <div class="input-box">
+                <textarea oninput="showElem()" id="fontgenerator" placeholder="Enter your text, then scroll down ↓"
+                    title="Enter your font for generator"></textarea>
+            </div>
+        </div>
+        <div class="box">
+            <div class="fontgeneratorstyle">
+                <p class="oldEnglishCharMap" onclick="copyit(this)"></p>
+                <p class="oldenglish" onclick="copyit(this)"></p>
+                <p class="fullCrazy" onclick="copyit(this)"></p>
+                <p class="cursive" onclick="copyit(this)"></p>
+                <p class="scriptify" onclick="copyit(this)"></p>
+                <p class="doubleStruck" onclick="copyit(this)"></p>
+                <p class="wideTextCharMap" onclick="copyit(this)"></p>
+                <p class="lunitoolsbubbles" onclick="copyit(this)"></p>
+                <p class="monospaceCharMap" onclick="copyit(this)"></p>
+                <p class="gunbold" onclick="copyit(this)"></p>
+                <p class="italicCharMap" onclick="copyit(this)"></p>
+                <p class="boldItalicCharMap" onclick="copyit(this)"></p>
+                <p class="invertedSquares" onclick="copyit(this)"></p>
+                <p class="lunicreepify" onclick="copyit(this)"></p>
+                <p class="fattext" onclick="copyit(this)"></p>
+                <p class="bold" onclick="copyit(this)"></p>
+                <p class="blockydoubleStruck" onclick="copyit(this)"></p>
+                <p class="result result-s1" onclick="copyit(this)"></p>
+                <p class="squares" onclick="copyit(this)"></p>
+                <p class="lunitoolsmirrorencode" onclick="copyit(this)"></p>
+                <p class="result result-s4" onclick="copyit(this)"></p>
+                <p class="lunitoolsflipencode" onclick="copyit(this)"></p>
+                <p class="gungreek" onclick="copyit(this)"></p>
+                <p class="superscriptCharMap" onclick="copyit(this)"></p>
+                <p class="subscriptCharMap" onclick="copyit(this)"></p>
+                <p class="lunitoolstinyencode" onclick="copyit(this)"></p>
+                <p class="squiggle" onclick="copyit(this)"></p>
+                <p class="wingssquigglelast" onclick="copyit(this)"></p>
+                <p class="result result-s19" onclick="copyit(this)"></p>
+                <p class="result result-s20" onclick="copyit(this)"></p>
+                <p class="result result-s11" onclick="copyit(this)"></p>
+                <p class="result result-s17" onclick="copyit(this)"></p>
+                <p class="wingssquiggle" onclick="copyit(this)"></p>
+                <p class="result result-s6" onclick="copyit(this)"></p>
+                <p class="result result-s8" onclick="copyit(this)"></p>
+                <p class="result result-s9" onclick="copyit(this)"></p>
+                <p class="watercursive" onclick="copyit(this)"></p>
+                <p class="squiggle4" onclick="copyit(this)"></p>
+                <p class="result result-s18" onclick="copyit(this)"></p>
+                <p class="result result-s5" onclick="copyit(this)"></p>
+                <p class="currency" onclick="copyit(this)"></p>
+                <p class="heartbeatoldenglish" onclick="copyit(this)"></p>
+                <p class="result result-s10" onclick="copyit(this)"></p>
+                <p class="result result-s12" onclick="copyit(this)"></p>
+                <p class="result result-s13" onclick="copyit(this)"></p>
+                <p class="asianStyleCharMap" onclick="copyit(this)"></p>
+                <p class="firework" onclick="copyit(this)"></p>
+                <p class="kissfattext" onclick="copyit(this)"></p>
+                <p class="result result-s31" onclick="copyit(this)"></p>
+                <p class="result result-s22" onclick="copyit(this)"></p>
+                <p class="result result-s23" onclick="copyit(this)"></p>
+                <p class="result result-s24" onclick="copyit(this)"></p>
+                <p class="wingssquiggleghost" onclick="copyit(this)"></p>
+                <p class="result result-s25" onclick="copyit(this)"></p>
+                <p class="result result-s26" onclick="copyit(this)"></p>
+                <p class="result result-s27" onclick="copyit(this)"></p>
+                <p class="fullCrazy1" onclick="copyit(this)"></p>
+                <p class="stinky" onclick="copyit(this)"></p>
+                <p class="crossAboveBelow" onclick="copyit(this)"></p>
+                <p class="arrowBelow" onclick="copyit(this)"></p>
+                <p class="wingssquiggle4" onclick="copyit(this)"></p>
+                <p class="result result-s29" onclick="copyit(this)"></p>
+                <p class="result result-s30" onclick="copyit(this)"></p>
+                <p class="strikeThrough" onclick="copyit(this)"></p>
+                <p class="wingssquiggle6" onclick="copyit(this)"></p>
+                <p class="tildeStrikeThrough" onclick="copyit(this)"></p>
+                <p class="slashThrough" onclick="copyit(this)"></p>
+                <p class="underline" onclick="copyit(this)"></p>
+                <p class="doubleUnderline" onclick="copyit(this)"></p>
+                <p class="fullCrazy3" onclick="copyit(this)"></p>
+                <p class="result result-s3" onclick="copyit(this)"></p>
+                <p class="squiggle2" onclick="copyit(this)"></p>
+                <p class="symbols" onclick="copyit(this)"></p>
+                <p class="greek" onclick="copyit(this)"></p>
+                <p class="wingssquiggleonemore" onclick="copyit(this)"></p>
+                <p class="result result-s14" onclick="copyit(this)"></p>
+                <p class="bentText" onclick="copyit(this)"></p>
+                <p class="upperAngles" onclick="copyit(this)"></p>
+                <p class="squiggle3" onclick="copyit(this)"></p>
+                <p class="gunsymbols" onclick="copyit(this)"></p>
+                <p class="squiggle5" onclick="copyit(this)"></p>
+                <p class="result result-s15" onclick="copyit(this)"></p>
+                <p class="squiggle6" onclick="copyit(this)"></p>
+                <p class="futureAlien" onclick="copyit(this)"></p>
+                <p class="cuteText" onclick="copyit(this)"></p>
+                <p class="starJoiner" onclick="copyit(this)"></p>
+                <p class="hashJoiner" onclick="copyit(this)"></p>
+                <p class="wavyJoiner" onclick="copyit(this)"></p>
+                <p class="heartsBetween" onclick="copyit(this)"></p>
+                <p class="singlewavyJoiner" onclick="copyit(this)"></p>
+                <p class="dottyJoiner" onclick="copyit(this)"></p>
+                <p class="curlybrackets1" onclick="copyit(this)"></p>
+                <p class="thickBox" onclick="copyit(this)"></p>
+                <p class="curlybrackets" onclick="copyit(this)"></p>
+                <p class="weirdBox1" onclick="copyit(this)"></p>
+                <p class="weirdBox" onclick="copyit(this)"></p>
+                <p class="diametricBox" onclick="copyit(this)"></p>
+                <p class="dotBox" onclick="copyit(this)"></p>
+                <p class="arrowBox" onclick="copyit(this)"></p>
+                <p class="arrowBox1" onclick="copyit(this)"></p>
+                <p class="arrowjoin" onclick="copyit(this)"></p>
+                <p class="fullCrazy4" onclick="copyit(this)"></p>
+                <p class="fullCrazy5" onclick="copyit(this)"></p>
+                <p class="fullCrazy6" onclick="copyit(this)"></p>
+                <p class="fullCrazy7" onclick="copyit(this)"></p>
+                <p class="fullCrazy8" onclick="copyit(this)"></p>
+                <p class="fullCrazy9" onclick="copyit(this)"></p>
+                <p class="fullCrazy10" onclick="copyit(this)"></p>
+                <div class="content">
+                    <p class="minigame" onclick="copyit(this)"></p>
+                    <p class="starbold" onclick="copyit(this)"></p>
+                    <p class="starbeatoldenglish" onclick="copyit(this)"></p>
+                    <p class="wingssquiggleextrastar" onclick="copyit(this)"></p>
+                    <p class="stardoubleStruck" onclick="copyit(this)"></p>
+                </div>
+                <div class="content">
+                    <p class="gunshotbigrus" onclick="copyit(this)"></p>
+                    <p class="gunshotfattext" onclick="copyit(this)"></p>
+                    <p class="gunshotcursive" onclick="copyit(this)"></p>
+                    <p class="gunupperAngles" onclick="copyit(this)"></p>
+                    <p class="gunshotbold" onclick="copyit(this)"></p>
+                    <p class="lennysquiggle" onclick="copyit(this)"></p>
+                    <p class="lennyfattext" onclick="copyit(this)"></p>
+                    <p class="lennygreek" onclick="copyit(this)"></p>
+                    <p class="lennybeatoldenglish" onclick="copyit(this)"></p>
+                    <p class="gundoubleStruck" onclick="copyit(this)"></p>
+                    <p class="wingssquigglegun" onclick="copyit(this)"></p>
+                    <p class="wingssquiggleghostgun" onclick="copyit(this)"></p>
+                </div>
+                <div class="content">
+                    <p class="cuteText1" onclick="copyit(this)"></p>
+                    <p class="cuteText2" onclick="copyit(this)"></p>
+                    <p class="fullCrazy11" onclick="copyit(this)"></p>
+                    <p class="fullCrazy12" onclick="copyit(this)"></p>
+                    <p class="fullCrazy13" onclick="copyit(this)"></p>
+                    <p class="fullCrazy14" onclick="copyit(this)"></p>
+                    <p class="fullCrazy15" onclick="copyit(this)"></p>
+                    <p class="fullCrazy16" onclick="copyit(this)"></p>
+                    <p class="fullCrazy17" onclick="copyit(this)"></p>
+                    <p class="fullCrazy18" onclick="copyit(this)"></p>
+                    <p class="fullCrazy19" onclick="copyit(this)"></p>
+                    <p class="fullCrazy20" onclick="copyit(this)"></p>
+                </div>
+            </div>
+            <a href="#" id="loadMore">Load More</a>
+        </div>
+        <div class="article">
+            <h1 id="Font-Generator">Font Generator</h1>
+            <p>Welcome all of you to&nbsp;<b>Font Generator</b>, This is a Font Generator tool. Which is developed
+                by encrypted coding of JavaScript and CSS to protect your system's privacy. With which you can
+                convert any normal text into different types of font generator styles. And here you will get to see the
+                unique and high-quality font generator style, which you can easily copy and paste anywhere and read the
+                full article given below to know more about the Font Generator.</p>
+            <h2 id="What-is-a-Font-Generator">What is a Font Generator? 🤔</h2>
+            <p>Font Generator is a hi-tech online text changer tool that converts all types of normal text into fancy
+                text and good-looking text. Nowadays, font generators are most commonly used to create social media,
+                posters, and banners. Because all these require different types of fancy styles, which you will see
+                inside the Font Generator tool, here you can easily copy and paste any font generator style</p>
+            <h2 id="Work-of-Font-Generator">Work of Font Generator 🎨</h2>
+            <p>As you all know that nowadays everyone likes to write stylish and cool captions at the bottom of
+                the post on all social media platforms like Instagram, Facebook, Twitter, and etc. That's why I have
+                brought you Font Generator which is an online stylish and cool Font Generator tool with the help of
+                which you can convert any normal text into font generator.</p>
+            <p><b>🎯 Note:</b>&nbsp;Font Generator Tool has no copyright on any of the text and all the font generator
+                created here is created from a special script.</p>
+            <h2 id="Font-Generator-For-Social-Media">Font Generator For Social Media</h2>
+            <p>Font Generator has a lot of work in Social Media because whenever someone shares his post on Instagram,
+                Facebook, Twitter or any social media platform, then he needs Caption and stylish fonts can use Font
+                Generator to help him.&nbsp;Because Font Generator Tool will convert your normal text into many fancy
+                and stylish text. And whatever text you like and click on it, it will be copied automatically and you
+                can easily paste it on any social media platform so that your captain will look very unique.</p>
+            <h2 id="Key-Features-of-this-Text-Generator">🚦 Key Features of this Font Generator</h2>
+            <p>Font Generator tool that takes care of your privacy and copyright issues(No Copyright on Text
+                Style). and there is also some special feature of the Font Generator tool which I have mentioned
+                below.</p>
+            <ul>
+                <li>All the text styles of Font Generators are unique and stylish.</li>
+                <li>With one click in the Font Generator tool, you can copy any font generator and after copying you
+                    can paste it at your desired place.</li>
+                <li>Font Generator tool designed with JavaScript, CSS, and special codes, due to which its
+                    working speed is very fast</li>
+                <li>Anyone can use a Font Generator easily, just type your text in the box then this text
+                    generator tool will automatically convert that text into fancy and cool texts</li>
+            </ul>
+            <h2 id="Compatibility">Compatibility</h2>
+            <p>I hope you liked all the fancy styles. and you will agree with the Font Generator Tool, this tool
+                is designed in a very special way because all the fancy styles that have been put inside this tool
+                are all created from the encrypted coding of JavaScript and CSS. and also a Font Generator Tool is
+                the best tool to write bio, tags, captions of social media platforms. so that you can choose the
+                font generator of your choice, Copy and Paste it anywhere.</p>
+            <hr style="margin-top: 1.25rem;">
+            <p>Please note that this site uses cookies to personalise content and adverts, to provide social media
+                features, and to analyse web traffic. <a style="text-decoration: revert;" href="/privacy.html">Click here</a> for more information.</p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type='text/javascript'></script>
+    <script src='/script.js' type='text/javascript'></script>
+</body>
+<script type="text/javascript">
+function copyit(el) {
+if (document.body.createTextRange) {
+    var textRange = document.body.createTextRange();
+    textRange.moveToElementText(el);
+    textRange.selecopyit();
+    textRange.execCommand("Copy");
+    //tooltip(el, "Copied!");  
+} else if (window.getSelection && document.createRange) {
+    var editable = el.contentEditable;
+    var readOnly = el.readOnly;
+    el.contentEditable = true;
+    el.readOnly = true;
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    if (el.nodeName == "TEXTAREA" || el.nodeName == "INPUT") el.selecopyit();
+    if (el.setSelectionRange) el.setSelectionRange(0, 999999);
+    el.contentEditable = editable;
+    el.readOnly = readOnly;
+    if (document.queryCommandSupported("copy")) {
+        var successful = document.execCommand('copy');
+        if (successful) $('body').append('<p class="copied"><input class="text" value="' + $(el).text() + '" /><span class="copybtn"><b>Copied</b></span></p>'),
+            setTimeout(function () {
+                $('.copied').remove();
+            }, 1000)
+        else $('body').append('<p class="copied"><input class="text" value="Press CTRL+C to copy" /></p>'),
+            setTimeout(function () {
+                $('.copied').remove();
+            }, 1000)
+    } else {
+        if (!navigator.userAgent.match(/ipad|ipod|iphone|android|silk/i)) $('body').append('<p class="copied"><input class="text" value="Press CTRL+C to copy" /></p>'),
+            setTimeout(function () {
+                $('.copied').remove();
+            }, 1000)
+    }
+}
+}
+</script>
+</html>
