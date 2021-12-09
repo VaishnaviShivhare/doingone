@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Line Fonts Generator (𝓬𝓸𝓹𝔂 𝕒𝕟𝕕 𝓅𝒶𝓈𝓉𝑒) ― Fontgenerator.club</title>
+    <meta name="description" content="Line Fonts Generator (𝓬𝓸𝓹𝔂 𝕒𝕟𝕕 𝓅𝒶𝓈𝓉𝑒) ― Fontgenerator.club">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+    <link id="favicon" rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main">
+        <p id="logo">Font Generator</p>
+        <div class="linksdata">
+            <center>
+                <a href="/New-Fonts.html"><button>🌝 New Fonts</button></a>
+                <a href="/Gun-Fonts.html"><button>🔫 Gun Fonts</button></a>
+                <a href="/Crazy-Fonts.html"><button>💣 Crazy Fonts</button></a>
+                <a href="/Line-Fonts.html"><button>💨 Line Fonts</button></a>
+                <a href="/Small-Fonts.html"><button>🎁 Small Fonts</button></a>
+                <a href="/Japanese-Fonts.html"><button>🐵 Japanese Fonts</button></a>
+                <a href="https://www.letras-diferentes.com/"><button>🪔 Letras Diferentes</button></a>
+            </center>
+        </div>
+        <div class="fontgenerator">
+            <div class="input-box">
+                <textarea oninput="showElem()" id="fontgenerator" placeholder="Enter your text, then scroll down ↓"
+                    title="Enter your font for generator"></textarea>
+            </div>
+        </div>
+        <div class="box">
+            <div class="fontgeneratorstyle">
+                <p class="result result-s31" onclick="copyit(this)"></p>
+                <p class="result result-s22" onclick="copyit(this)"></p>
+                <p class="result result-s23" onclick="copyit(this)"></p>
+                <p class="result result-s24" onclick="copyit(this)"></p>
+                <p class="result result-s25" onclick="copyit(this)"></p>
+                <p class="result result-s26" onclick="copyit(this)"></p>
+                <p class="result result-s27" onclick="copyit(this)"></p>
+                <p class="stinky" onclick="copyit(this)"></p>
+                <p class="crossAboveBelow" onclick="copyit(this)"></p>
+                <p class="arrowBelow" onclick="copyit(this)"></p>
+                <p class="result result-s29" onclick="copyit(this)"></p>
+                <p class="result result-s30" onclick="copyit(this)"></p>
+                <p class="strikeThrough" onclick="copyit(this)"></p>
+                <p class="tildeStrikeThrough" onclick="copyit(this)"></p>
+                <p class="slashThrough" onclick="copyit(this)"></p>
+                <p class="underline" onclick="copyit(this)"></p>
+                <p class="doubleUnderline" onclick="copyit(this)"></p>
+            </div>
+        </div>
+    </div>
+    <div class="article">
+        <h1 id="Line-Fonts-Generator">Line Fonts Generator</h1>
+        <p>Welcome all of you to&nbsp;<b>Line Fonts Generator</b>, This is a Line Fonts Generator tool. Which is developed
+            by encrypted coding of JavaScript and CSS to protect your system's privacy. With which you can
+            convert any normal text into different types of Line Fonts Generator styles. And here you will get to see the
+            unique and high-quality Line Fonts Generator style, which you can easily copy and paste anywhere and read the
+            full article given below to know more about the Line Fonts Generator.</p>
+        <hr style="margin-top: 1.25rem;">
+        <p>Please note that this site uses cookies to personalise content and adverts, to provide social media
+            features, and to analyse web traffic. <a style="text-decoration: revert;" href="/privacy.html">Click
+                here</a> for more information.</p>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type='text/javascript'></script>
+    <script src='/script.js' type='text/javascript'></script>
+</body>
+<script type="text/javascript">
+    function copyit(el) {
+        if (document.body.createTextRange) {
+            var textRange = document.body.createTextRange();
+            textRange.moveToElementText(el);
+            textRange.selecopyit();
+            textRange.execCommand("Copy");
+            //tooltip(el, "Copied!");  
+        } else if (window.getSelection && document.createRange) {
+            var editable = el.contentEditable;
+            var readOnly = el.readOnly;
+            el.contentEditable = true;
+            el.readOnly = true;
+            var range = document.createRange();
+            range.selectNodeContents(el);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            if (el.nodeName == "TEXTAREA" || el.nodeName == "INPUT") el.selecopyit();
+            if (el.setSelectionRange) el.setSelectionRange(0, 999999);
+            el.contentEditable = editable;
+            el.readOnly = readOnly;
+            if (document.queryCommandSupported("copy")) {
+                var successful = document.execCommand('copy');
+                if (successful) $('body').append('<p class="copied"><input class="text" value="' + $(el).text() + '" /><span class="copybtn"><b>Copied</b></span></p>'),
+                    setTimeout(function () {
+                        $('.copied').remove();
+                    }, 1000)
+                else $('body').append('<p class="copied"><input class="text" value="Press CTRL+C to copy" /></p>'),
+                    setTimeout(function () {
+                        $('.copied').remove();
+                    }, 1000)
+            } else {
+                if (!navigator.userAgent.match(/ipad|ipod|iphone|android|silk/i)) $('body').append('<p class="copied"><input class="text" value="Press CTRL+C to copy" /></p>'),
+                    setTimeout(function () {
+                        $('.copied').remove();
+                    }, 1000)
+            }
+        }
+    }
+</script>
+
+</html>
